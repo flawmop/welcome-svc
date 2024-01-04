@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: welcome-svc
+  labels:
+    app: welcome-svc
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: welcome-svc
+  template:
+    metadata:
+      labels:
+        app: welcome-svc
+    spec:
+      containers:
+        - name: welcome-svc
+          image: ghcr.io/flawmop/welcome-svc
+          imagePullPolicy: IfNotPresent
+          lifecycle:
+            preStop:
+              exec:
+                command: [ "sh", "-c", "sleep 5" ]
+          ports:
+            - containerPort: 9001
