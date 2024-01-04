@@ -8,7 +8,7 @@ public class HomeController {
 
   @GetMapping("/")
   public String getGreeting() {
-    return "Welcome to the new portal!";
+    return "Welcome to the latest portal!";
   }
 
 }
