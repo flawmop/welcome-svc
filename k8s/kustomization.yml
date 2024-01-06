@@ -9,6 +9,8 @@ configMapGenerator:
   - name: welcome-config
     files:
       - application.yml
-    options:
-      labels:
-        app: welcome-svc
+
+generatorOptions:
+  disableNameSuffixHash: true
+  labels:
+    app: welcome-svc
