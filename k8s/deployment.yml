@@ -29,4 +29,5 @@ spec:
               mountPath: /workspace/config
       volumes:
         - name: welcome-config-volume
-          configMap: welcome-config
+          configMap:
+            name: welcome-config
