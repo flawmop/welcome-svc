@@ -24,3 +24,9 @@ spec:
                 command: [ "sh", "-c", "sleep 5" ]
           ports:
             - containerPort: 9001
+          volumeMounts:
+            - name: welcome-config-volume
+              mountPath: /workspace/config
+      volumes:
+        - name: welcome-config-volume
+          configMap: welcome-config
