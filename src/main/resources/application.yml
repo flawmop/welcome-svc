@@ -15,4 +15,4 @@ spring:
     timeout-per-shutdown-phase: 15s
 
 portal:
-  greeting: Welcome from src/main/resources/application.yml
+  greeting: from src/main/resources/application.yml
