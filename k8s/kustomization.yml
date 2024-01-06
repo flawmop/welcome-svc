@@ -4,3 +4,11 @@ kind: Kustomization
 resources:
   - deployment.yml
   - service.yml
+
+configMapGenerator:
+  - name: welcome-config
+    files:
+      - application.yml
+    options:
+      labels:
+        app: welcome-svc
