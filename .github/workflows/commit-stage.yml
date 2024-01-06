@@ -2,8 +2,11 @@ name: Commit Stage
 on: push
 
 env:
+  OWNER: flawmop
   REGISTRY: ghcr.io
   IMAGE_NAME: flawmop/welcome-svc
+  APP_REPO: welcome-svc
+  DEPLOY_REPO: portal-deploy
   VERSION: ${{ github.sha }}
 
 jobs:
