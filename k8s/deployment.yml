@@ -26,9 +26,9 @@ spec:
             - containerPort: 9001
           resources:
             requests:
-              memory: 50Mi
+              memory: 600Mi
             limits:
-              memory: 100Mi
+              memory: 750Mi
           volumeMounts:
             - name: welcome-config-volume
               mountPath: /workspace/config
